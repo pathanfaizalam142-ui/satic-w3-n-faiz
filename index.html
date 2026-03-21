@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Day 3 Dashboard</title>
+
+<link rel="stylesheet" href="css/style.css">
+
+<!-- Chart JS -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+
+<body>
+    <div class="container">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+        <h2 class="logo">DATAFLOW</h2>
+
+        <ul class="menu">
+            <li>Dashboard</li>
+            <li>Analytics</li>
+            <li>Users</li>
+            <li>Settings</li>
+        </ul>
+    </aside>
+
+    <!-- MAIN -->
+    <main class="main">
+
+        <!-- HEADER -->
+        <header class="header">
+            <input type="text" placeholder="Search..." class="search">
+            <div class="profile">
+                <img src="img/faiz.jpg" alt="">
+                <span>Faiz</span>
+            </div>
+        </header>
+        <div class="d4-container">
+
+    <h2 class="d4-title">User Revenue Table</h2>
+
+    <div class="d4-table-wrapper">
+
+        <table class="d4-table">
+
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Revenue</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+
+            <tbody id="d4-table-body">
+                <!-- JS se data aayega -->
+            </tbody>
+
+        </table>
+
+    </div>
+
+</div>
+
+<div class="d3-main">
+
+    <h2 class="d3-heading">Top 10 Revenue Contributors</h2>
+
+    <div class="d3-card">
+        <canvas id="d3Chart"></canvas>
+    </div>
+
+</div>
+<section class="day5-wrapper">
+
+  <button id="d5-theme-btn">Toggle Theme</button>
+
+  <select id="d5-filter">
+    <option value="all">All</option>
+    <option value="active">Active</option>
+    <option value="inactive">Inactive</option>
+  </select>
+
+  <table border="1" width="100%" id="d5-table">
+    <thead>
+      <tr>
+        <th>NO</th>
+        <th>Name</th>
+        <th>Status</th>
+        <th>Revenue</th>
+      </tr>
+    </thead>
+    <tbody id="d5-body"></tbody>
+  </table>
+
+</section>
+<div id="app-container">
+
+  <!-- SIDEBAR (Desktop Only) -->
+  
+
+  <!-- MAIN CONTENT -->
+  <main id="main-content">
+
+    <!-- HEADER -->
+    <header id="header-top">
+      <span>←</span>
+      <h2>Dashboard</h2>
+      <button id="notify-btn">🔔</button>
+    </header>
+
+    <!-- CARDS -->
+    <section id="cards-container">
+
+      <!-- TABLE -->
+      <div class="card-box table-box">
+        <p>Sales Overview</p>
+        <div class="table-scroll-box">
+          <table>
+            <tr><td>0.06</td><td>742</td><td>186</td></tr>
+            <tr><td>188</td><td>135</td><td>924</td></tr>
+          </table>
+        </div>
+      </div>
+
+      <!-- FILTER -->
+      <div class="card-box">
+        <h3>Sales Overview</h3>
+        <div class="btn-group-box">
+          <button>Filter</button>
+          <button>Setup</button>
+          <button>More</button>
+        </div>
+      </div>
+
+      <!-- PROGRESS -->
+      <div class="card-box">
+        <h3>Progress</h3>
+        <div class="progress-bar-box">
+          <div></div>
+        </div>
+      </div>
+
+      <!-- CHART -->
+      <div class="card-box">
+        <h3>Analytics</h3>
+        <div class="chart-box">
+          <div class="bar-box" style="height:40%"></div>
+          <div class="bar-box" style="height:60%"></div>
+          <div class="bar-box" style="height:80%"></div>
+          <div class="bar-box" style="height:50%"></div>
+        </div>
+      </div>
+
+      <!-- SETTINGS -->
+      <div class="card-box">
+        <h3>Settings</h3>
+        <div class="line-box"></div>
+      </div>
+
+    </section>
+  </main>
+
+</div>
+
+<!-- MOBILE BOTTOM NAV -->
+<div id="bottom-nav-mobile">
+  <button class="active">🏠<br>Dashboard</button>
+  <button>📊<br>Analytics</button>
+  <button>⚙️<br>Settings</button>
+  <button>👤<br>Profile</button>
+</div>
+
+<script src="javascript/script.js"></script>
+
+</body>
+</html>
